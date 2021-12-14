@@ -1,4 +1,4 @@
-package com.frank.types;
+package com.frank.exceptions;
 
 //Custom Exception class is a subclass of the RuntimeException
 public class NonNumericInputException extends RuntimeException {

@@ -11,12 +11,10 @@ public class Bowler {
                 bowlerName = "";
                 scores = null;
         }
-
         public Bowler(String bowlerName, int[] scores) {
                 this.bowlerName = bowlerName;
                 this.scores     = scores;
         }
-
         public String getBowlerName() {
                 return bowlerName;
         }
@@ -36,8 +34,14 @@ public class Bowler {
         // property to return derived Bowler average
         public double getAverage() {
                 int totalScore = 0;  // hold total of all scores
-                for (int i=0; i < scores.length; i++) {
-                        totalScore += scores[i];
+
+                try {
+                        for (int i = 0; i < scores.length; i++) {
+                                totalScore += scores[i];
+                        }
+                }
+                catch (NullPointerException theException) {
+                        theException.printStackTrace();
                 }
                 return (double) totalScore / scores.length;
         }
