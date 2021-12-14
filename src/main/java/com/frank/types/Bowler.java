@@ -36,13 +36,8 @@ public class Bowler {
         // property to return derived Bowler average
         public double getAverage() {
                 int totalScore = 0;  // hold total of all scores
-                try {
-                        for (int i = 0; i < scores.length; i++) {
-                                totalScore += scores[i];
-                        }
-                } catch (NullPointerException e) {
-                        e.printStackTrace();
-
+                for (int i=0; i < scores.length; i++) {
+                        totalScore += scores[i];
                 }
                 return (double) totalScore / scores.length;
         }
